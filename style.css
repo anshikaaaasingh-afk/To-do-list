@@ -1,0 +1,243 @@
+/* ── Reset & base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: #1a1a1a;
+}
+
+/* ── Card container ── */
+.container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── Header ── */
+header {
+  margin-bottom: 1.75rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ── Input row ── */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+.input-row input:focus {
+  border-color: #6c63ff;
+  background: #fff;
+}
+
+.input-row input::placeholder {
+  color: #bbb;
+}
+
+#addBtn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+#addBtn:hover {
+  background: #574fd6;
+}
+
+#addBtn:active {
+  transform: scale(0.97);
+}
+
+/* ── Filter buttons ── */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 7px 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+.filter-btn.active {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+/* ── Task list ── */
+#taskList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+}
+
+/* ── Task item ── */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid #f0f0f0;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: border-color 0.15s;
+  animation: slideIn 0.18s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.task-item:hover {
+  border-color: #ddd;
+}
+
+.task-item.done {
+  background: #f8f8f8;
+}
+
+/* ── Checkbox ── */
+.task-check {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #6c63ff;
+  flex-shrink: 0;
+}
+
+/* ── Task text ── */
+.task-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  word-break: break-word;
+  transition: color 0.2s;
+}
+
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+/* ── Delete button ── */
+.task-del {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1;
+  padding: 0 2px;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+
+.task-del:hover {
+  color: #e74c3c;
+}
+
+/* ── Empty state ── */
+.empty-msg {
+  text-align: center;
+  padding: 2rem 0;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* ── Footer ── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+#clearDoneBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #aaa;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+#clearDoneBtn:hover {
+  color: #e74c3c;
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  body {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+}
