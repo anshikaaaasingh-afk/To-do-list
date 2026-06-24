@@ -30,7 +30,7 @@ todo-list/
 
 ## 🏃 How to Run
 
-1. Clone or download this repository
+1. Clone or download this repository (ok)
 2. Open `index.html` in your browser
 3. That's it — no install needed!
 
