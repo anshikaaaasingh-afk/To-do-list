@@ -50,7 +50,7 @@ open index.html
 ## 📸 Screenshot
 
 > *(Add a screenshot of your app here)*
-
+ok
 ---
 
 Made with ❤️ as a beginner project.
