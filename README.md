@@ -49,7 +49,6 @@ open index.html
 
 ## 📸 Screenshot
 
-> *(Add a screenshot of your app here)*
 
 ---
 
